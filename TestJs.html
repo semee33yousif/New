@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body dir="rtl">
+    <!-- تسجيل الدخول -->
+    <form>
+        <div class="back_color">
+            <input type="text" placeholder="ادخل اسمك" id="name" class="int">
+            <input type="password" placeholder="ادخل كلمة المرور" id="pass" class="int">
+            <div class="check">
+                <input type="checkbox" name="" id="check" required>
+                <label for="">قبول</label>
+            </div>
+            <button type="submit" class="log" onclick="fill()">تسجيل الدخول</button>
+        </div>
+    </form>
+    <!-- تسجيل الدخول -->
+
+
+    <!-- js البداية تسجيل الدخول -->
+
+    <script>
+        function fill() {
+            let name = document.querySelector('#name').value;
+            let pass = document.querySelector('#pass').value;
+            let check = document.querySelector('#check').getAttribute('checked');
+
+            if (name == '' && pass == '') {
+                alert("ادخل اسم المستخدم")
+            }
+            else  {
+             
+             
+                let x = new Date();
+                alert("مرحبا بكم: " + name + ' الوقت الان ' + x);
+            }
+        }
+    </script>
+    <!-- js النهاية تسجيل الدخول -->
+
+
+
+
+    <script>
+        // change color dynamicly 
+
+        function changeColor(y) {
+            var bg = document.querySelector('.change_color');
+            document.body.style.background = y;
+        }
+        function dynamic() {
+            let color = document.querySelector('#testcolor').value;
+            //console.log(color);
+            document.body.style.background = color;
+        }
+    // change color dynamicly
+
+    </script>
+
+<div class="factorial">
+    <input type="number" min="1" id="facNum">
+    <button  class="fk" onclick="factorial()">المضروب هو:</button>
+</div>
+
+<script>
+    function factorial(){
+        let x=document.getElementById('facNum').value;
+        var y=1,i;
+        for(i=x; i>=1;i--){
+            y=y*i;
+        }
+        alert(y);
+    }
+</script>
+         <!-- start change color dynamicly -->
+    <div class="change_color">
+        <button class="gr" onclick="changeColor('gray')">رمادي</button>
+        <button  class="wh" onclick="changeColor('white')">أبيض</button>
+        <button  class="bl" onclick="changeColor('black')">أسود</button> <br>
+
+       
+    </div>
+    <!-- end change color dynamicly -->
+</body>
+
+</html>
